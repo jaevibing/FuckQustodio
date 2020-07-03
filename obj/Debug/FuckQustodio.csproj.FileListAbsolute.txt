@@ -1,0 +1,10 @@
+C:\Users\stant\source\repos\FuckQustodio\bin\Debug\FuckQustodio.exe.config
+C:\Users\stant\source\repos\FuckQustodio\bin\Debug\FuckQustodio.exe
+C:\Users\stant\source\repos\FuckQustodio\bin\Debug\FuckQustodio.pdb
+C:\Users\stant\source\repos\FuckQustodio\obj\Debug\FuckQustodio.csprojAssemblyReference.cache
+C:\Users\stant\source\repos\FuckQustodio\obj\Debug\FuckQustodio.Form1.resources
+C:\Users\stant\source\repos\FuckQustodio\obj\Debug\FuckQustodio.Properties.Resources.resources
+C:\Users\stant\source\repos\FuckQustodio\obj\Debug\FuckQustodio.csproj.GenerateResource.cache
+C:\Users\stant\source\repos\FuckQustodio\obj\Debug\FuckQustodio.csproj.CoreCompileInputs.cache
+C:\Users\stant\source\repos\FuckQustodio\obj\Debug\FuckQustodio.exe
+C:\Users\stant\source\repos\FuckQustodio\obj\Debug\FuckQustodio.pdb
