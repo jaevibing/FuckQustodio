@@ -1,0 +1,10 @@
+C:\Users\stant\source\repos\NukeQustodio\bin\Debug\NukeQustodio.exe.config
+C:\Users\stant\source\repos\NukeQustodio\bin\Debug\NukeQustodio.exe
+C:\Users\stant\source\repos\NukeQustodio\bin\Debug\NukeQustodio.pdb
+C:\Users\stant\source\repos\NukeQustodio\obj\Debug\NukeQustodio.csprojAssemblyReference.cache
+C:\Users\stant\source\repos\NukeQustodio\obj\Debug\NukeQustodio.Form1.resources
+C:\Users\stant\source\repos\NukeQustodio\obj\Debug\NukeQustodio.Properties.Resources.resources
+C:\Users\stant\source\repos\NukeQustodio\obj\Debug\NukeQustodio.csproj.GenerateResource.cache
+C:\Users\stant\source\repos\NukeQustodio\obj\Debug\NukeQustodio.csproj.CoreCompileInputs.cache
+C:\Users\stant\source\repos\NukeQustodio\obj\Debug\NukeQustodio.exe
+C:\Users\stant\source\repos\NukeQustodio\obj\Debug\NukeQustodio.pdb
