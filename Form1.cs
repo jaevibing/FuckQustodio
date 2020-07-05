@@ -22,19 +22,19 @@ namespace FuckQustodio
         private void start_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Qustodio has been blocked.");
-            System.Diagnostics.Process.Start(@"C:/Program Files/FuckQustodio/FuckQustodio.bat");
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\jack-debug\FuckQustodio\FuckQustodio.bat");
         }
 
         private void nuke_Click(object sender, EventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(@"C:/Program Files (x86)/Qustodio");
+            DirectoryInfo di = new DirectoryInfo(@"C:\Program Files (x86)\jack-debug\Qustodio");
             DialogResult dialogResult = MessageBox.Show("By continuing, your parents can find out you deleted Qustodio, proceed with caution.", "WARNING", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.OK)
             {
                 MessageBox.Show("Nuke launched");
                 if (di.Exists)
                 {
-                    DeleteDirectory(@"C:/Program Files (x86)/Qustodio");
+                    DeleteDirectory(@"C:\Program Files (x86)\Qustodio");
                     MessageBox.Show("Nuke has hit the target");
                 }
                 else
@@ -67,7 +67,7 @@ namespace FuckQustodio
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Qustodio has been blocked.");
-            System.Diagnostics.Process.Start(@"C:/Program Files/FuckQustodio/StopFuckQustodio.bat");
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\jack-debug\FuckQustodio\StopFuckQustodio.bat");
         }
     }
 }
