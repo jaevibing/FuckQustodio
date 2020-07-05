@@ -32,12 +32,13 @@
             this.start = new System.Windows.Forms.Button();
             this.nuke = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // start
             // 
             this.start.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start.Location = new System.Drawing.Point(361, 43);
+            this.start.Location = new System.Drawing.Point(203, 30);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(121, 44);
             this.start.TabIndex = 1;
@@ -48,7 +49,7 @@
             // nuke
             // 
             this.nuke.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuke.Location = new System.Drawing.Point(361, 133);
+            this.nuke.Location = new System.Drawing.Point(351, 168);
             this.nuke.Name = "nuke";
             this.nuke.Size = new System.Drawing.Size(121, 52);
             this.nuke.TabIndex = 2;
@@ -65,15 +66,28 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Thanks to RRR06 for the blocking script";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(361, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 61);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "STOP BLOCK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(494, 273);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nuke);
             this.Controls.Add(this.start);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "FuckQustodio";
             this.ResumeLayout(false);
@@ -85,6 +99,7 @@
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Button nuke;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

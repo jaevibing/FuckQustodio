@@ -63,5 +63,11 @@ namespace FuckQustodio
             }
             Directory.Delete(target, true);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Qustodio has been blocked.");
+            System.Diagnostics.Process.Start(@"C:/Program Files/FuckQustodio/StopFuckQustodio.bat");
+        }
     }
 }
