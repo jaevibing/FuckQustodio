@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -22,18 +23,25 @@ namespace FuckQustodio
         private void start_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Qustodio has been blocked.");
-            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\jack-debug\FuckQustodio\FuckQustodio.bat");
+            ExecuteCommand("sc config qengine start = disabled");
+            ExecuteCommand("sc config qupdate start = disabled");
+            ExecuteCommand("Taskkill / f / im QUpdateService.exe");
+            ExecuteCommand("Taskkill / f / im qengine.exe");
         }
 
         private void nuke_Click(object sender, EventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(@"C:\Program Files (x86)\jack-debug\Qustodio");
+            DirectoryInfo di = new DirectoryInfo(@"C:\Program Files (x86)\Qustodio");
             DialogResult dialogResult = MessageBox.Show("By continuing, your parents can find out you deleted Qustodio, proceed with caution.", "WARNING", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.OK)
             {
                 MessageBox.Show("Nuke launched");
                 if (di.Exists)
                 {
+                    ExecuteCommand("sc config qengine start = disabled");
+                    ExecuteCommand("sc config qupdate start = disabled");
+                    ExecuteCommand("Taskkill / f / im QUpdateService.exe");
+                    ExecuteCommand("Taskkill / f / im qengine.exe");
                     DeleteDirectory(@"C:\Program Files (x86)\Qustodio");
                     MessageBox.Show("Nuke has hit the target");
                 }
@@ -66,8 +74,35 @@ namespace FuckQustodio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Qustodio has been blocked.");
-            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\jack-debug\FuckQustodio\StopFuckQustodio.bat");
+            ExecuteCommand("sc config qengine start = enabled");
+            ExecuteCommand("sc config qupdate start = enabled");
+            MessageBox.Show("Blocking has stopped");
+        }
+
+        static void ExecuteCommand(string command)
+        {
+            int exitCode;
+            ProcessStartInfo processInfo;
+            Process process;
+
+            processInfo = new ProcessStartInfo("cmd.exe", "/c " + command);
+            processInfo.CreateNoWindow = true;
+            processInfo.UseShellExecute = false;
+            // *** Redirect the output ***
+            processInfo.RedirectStandardError = true;
+            processInfo.RedirectStandardOutput = true;
+
+            process = Process.Start(processInfo);
+            process.WaitForExit();
+
+            // *** Read the streams ***
+            // Warning: This approach can lead to deadlocks, see Edit #2
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
+            exitCode = process.ExitCode;
+
+            process.Close();
         }
     }
 }
